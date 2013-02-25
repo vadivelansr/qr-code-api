@@ -70,6 +70,11 @@ def main_loop():
                 result = api.decode(image, format)
                 image.close()
                 
+                print "Result:"
+                print result
+                if api.verbose:
+                    print "--------------------------------------------------------------------------------"
+                
             elif select == "3":
                 print "== Get list of campaigns and QR Codes =="
                 list = api.get_track_list()
